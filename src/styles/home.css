@@ -1,0 +1,126 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica;
+    height: 100%;
+    background-color: #B2D6FF;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Position logo and navbar items */
+    align-items: center;
+    padding: 25px 50px; /* Add padding to the left and right sides */
+    position: absolute;
+    top: -20px; /* Adjust the position of the navbar upwards */
+    width: calc(100% - 100px); /* Adjust width to account for padding */
+}
+
+.navbar img {
+    height: 110px; /* Memperbesar ukuran logo */
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-left: 25px; /* Menambah jarak antar item navbar */
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em; /* Memperbesar teks navbar */
+}
+
+.section1 {
+    background: url('../../assets/tuhanMemberkati.jpg') no-repeat center center/cover;
+    height: 100vh; /* Set height to 80% of the viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.section1 .headerOne{
+    font-size: 80px;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+.section1 .headerTwo {
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.section1 .eksplore {
+    background-color: #2E317F;
+    color: white;
+    border: none;
+    border-radius: 37px;
+    padding: 12px 25px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute; /* Set to absolute to position it independently */
+    top: 80%; /* Adjust this value to position flex-container */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    margin: 10px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    border-radius: 18px;
+}
+
+.boxContent{
+    justify-content: center; 
+    align-items: center; 
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.about{
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    margin-top: 150px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.about h2{
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.paragraphOne .paragraphTwo{
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    margin: 10px 50px;
+    font-size: 20px;
+}
