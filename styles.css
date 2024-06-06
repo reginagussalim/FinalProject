@@ -1,0 +1,169 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica;
+    height: 100%;
+    background-color: #B2D6FF;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Position logo and navbar items */
+    align-items: center;
+    padding: 25px 50px; /* Add padding to the left and right sides */
+    position: absolute;
+    top: -20px; /* Adjust the position of the navbar upwards */
+    width: calc(100% - 100px); /* Adjust width to account for padding */
+}
+
+.navbar img {
+    height: 110px; /* Memperbesar ukuran logo */
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-left: 25px; /* Menambah jarak antar item navbar */
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em; /* Memperbesar teks navbar */
+}
+
+.section1 {
+    background: url('assets/lokon.jpg') no-repeat center center/cover;
+    height: 80vh; /* Set height to 80% of the viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.section1 h1 {
+    font-size: 6em; /* Increase font size */
+    margin: 20px 0; /* Add margin top and bottom */
+    font-family: Helvetica; /* Ensure font is Helvetica */
+}
+
+.section2 {
+    padding: 50px 20px; /* Add padding to section 2 */
+    text-align: center;
+    background-color: #B0D9FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 80vh); /* Calculate remaining height */
+}
+
+.section2 .content {
+    max-width: 800px; /* Set a max-width for content */
+    margin: auto; /* Center content horizontally */
+    text-align: left; /* Align text to the left */
+}
+
+.section2 .content h2 {
+    margin-top: 0;
+    margin-bottom: 30px; /* Add bottom margin */
+    font-size: 2.5em; /* Increase font size */
+    text-align: center; /* Align heading text to center */
+}
+
+.section2 .content p {
+    line-height: 1.8; /* Increase line height for readability */
+    margin-bottom: 20px; /* Add bottom margin */
+    text-align: justify; /* Justify paragraph text */
+}
+
+/* section 3 */
+.section3 {
+    padding: 50px 20px; /* Add padding to section 3 */
+    text-align: center;
+}
+
+.section3 h2 {
+    font-size: 3em; /* Increase font size */
+    margin-bottom: 30px; /* Add bottom margin */
+    font-family: Helvetica; /* Ensure font is Helvetica */
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow wrapping of items */
+}
+
+.team-member {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    width: 250px; /* Set a fixed width for team member cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.team-member img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover; /* Ensure image is covered within the aspect ratio */
+    border-radius: 10px;
+}
+
+.team-member h3 {
+    margin: 15px 0 5px;
+    font-size: 1.5em;
+}
+
+.team-member p {
+    margin: 0 0 15px;
+    font-size: 1em;
+}
+
+.social-icons a img {
+    aspect-ratio: 1/1;
+    width: 30px; /* Set the size of social icons */
+    margin: 0 10px; /* Add spacing between icons */
+}
+
+/* Footer */
+.footer {
+    background-color: #040B59;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.footer .social-media {
+    margin-bottom: 20px; /* Add margin below social media icons */
+}
+
+.footer .social-media a img {
+     width: 30px; /* Set size of footer social icons */
+    margin: 0 10px; /* Add spacing between icons */
+}
+
+.footer .footer-nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px; /* Add spacing between footer nav items */
+    font-size: 1.1em;
+}
+
+.footer p {
+    margin: 10px 0 0;
+    font-size: 0.9em;
+}
+
+.footer .bold-text {
+    font-weight: bold;
+}
