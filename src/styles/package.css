@@ -8,16 +8,16 @@ body, html {
 
 .navbar {
     display: flex;
-    justify-content: space-between; /* Position logo and navbar items */
+    justify-content: space-between;
     align-items: center;
-    padding: 25px 50px; /* Add padding to the left and right sides */
+    padding: 25px 50px;
     position: absolute;
-    top: -20px; /* Adjust the position of the navbar upwards */
-    width: calc(100% - 100px); /* Adjust width to account for padding */
+    top: -20px;
+    width: calc(100% - 100px);
 }
 
 .navbar img {
-    height: 110px; /* Memperbesar ukuran logo */
+    height: 110px;
 }
 
 .navbar ul {
@@ -28,18 +28,18 @@ body, html {
 }
 
 .navbar ul li {
-    margin-left: 25px; /* Menambah jarak antar item navbar */
+    margin-left: 25px;
 }
 
 .navbar ul li a {
     color: white;
     text-decoration: none;
-    font-size: 1em; /* Memperbesar teks navbar */
+    font-size: 1em;
 }
 
 .section1 {
-    background: url('../../assets/') no-repeat center center/cover;
-    height: 80vh; /* Set height to 80% of the viewport height */
+    background: url('../../assets/bg-pack.jpg') no-repeat center center/cover;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -50,7 +50,105 @@ body, html {
 }
 
 .section1 h1 {
-    font-size: 6em; /* Increase font size */
-    margin: 20px 0; /* Add margin top and bottom */
-    font-family: Helvetica; /* Ensure font is Helvetica */
+    font-size: 6em;
+    margin: 20px 0;
+    font-family: Helvetica;
+}
+
+.section2 {
+    text-align: center;
+    padding: 50px;
+}
+
+.section2 h2 {
+    font-size: 3em;
+    margin-bottom: 40px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    padding: 0; /* Remove padding */
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 15px 15px 0 0; /* Match the card's border radius */
+    margin: 0; /* Remove margin */
+}
+
+.card h3 {
+    margin: 20px 0 10px;
+    font-size: 1.5em;
+}
+
+.card p {
+    font-size: 1em;
+    color: #666;
+    margin: 0 20px 20px; /* Add margin to keep text padding */
+}
+
+.card button.book-now {
+    background-color: #1d3a96;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: all 0.1s linear;
+
+}
+
+.card button.book-now:hover {
+    transition: all 0.1s linear;
+    background-color: #a2bae0;
+}
+
+.more-button {
+    background-color: #1d3a96;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.more-button:hover {
+    background-color: #1d3a96;
+}
+
+/* Footer */
+.footer {
+    background-color: #040B59;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.footer .social-media {
+    margin-bottom: 20px; /* Add margin below social media icons */
+}
+
+.footer .social-media a img {
+     width: 30px; /* Set size of footer social icons */
+    margin: 0 10px; /* Add spacing between icons */
+}
+
+.footer .footer-nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px; /* Add spacing between footer nav items */
+    font-size: 1.1em;
 }
