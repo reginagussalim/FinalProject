@@ -1,0 +1,94 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica;
+    background-color: #B2D6FF;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Position logo and navbar items */
+    align-items: center;
+    padding: 25px 50px; /* Add padding to the left and right sides */
+}
+
+.navbar img {
+    height: 110px; /* Memperbesar ukuran logo */
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-left: 25px; /* Menambah jarak antar item navbar */
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em; /* Memperbesar teks navbar */
+}
+
+.header h1{
+    font-weight: bold;
+    font-size: 90px;
+    text-align: center;
+    color: black;
+    padding: 0px;
+    margin: 20px 40px;
+    color: white;
+}
+
+.histroryCard {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    width: 50px;
+    margin: 20px 50px;
+}
+
+.historyCard .card{
+    margin: 25px 50px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.card-container{
+    margin-left:80px;
+    margin-right: 80px;
+}
+
+.cardContent{
+    display: flex;
+    align-items: center;
+}
+
+.historyCard .card img{
+    width: 220px;
+    border-radius: 10px 0 0 10px;
+}
+
+.historyCard .card .cardContent .place{
+    margin-left: 20px;
+    padding-left: 20px;
+    padding-right: 320px;
+
+}
+
+.historyCard .card .cardContent .status{
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-left: 60px;
+}
+
+.historyCard .card .cardContent .statusProses p{
+    font-weight: bold;
+    color: #145384;
+}
+
+.historyCard .card .cardContent .statusCancelled p{
+    font-weight: bold;
+    color: #FF0000;
+}
