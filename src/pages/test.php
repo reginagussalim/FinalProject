@@ -1,3 +1,13 @@
+<?php
+    include '../../config.php';
+    session_start();
+    
+    if (!isset($_SESSION['username'])) {
+        header("Location: ../auth/login.php");
+        exit(); // Terminate script execution after the redirect
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -73,46 +83,6 @@
             ngoni mo inga seumur hidup. Manjo keliling dunia dengan Xplore!
         </p>
     </div>
-
-    <div class="popularDestination">
-        <h2>POPULAR DESTINATIONS</h2>
-        <div class="card-container">
-            <div class="card">
-                <img src="../../assets/pantai.jpg" alt="Bunaken">
-                <h3>Bunaken</h3>
-                <p>Bunaken adalah destinasi wisata bahari yang terkenal di Indonesia, terletak di Provinsi Sulawesi Utara.</p>
-                <button class="book-now">Book now</button>
-            </div>
-            <div class="card">
-                <img src="../../assets/air.jpg" alt="Air Terjun Kali">
-                <h3>Air Terjun Kali</h3>
-                <p>Air Terjun Kali adalah destinasi wisata alam yang memukau, terletak di tengah hutan yang asri dan alami.</p>
-                <button class="book-now">Book now</button>
-            </div>
-            <div class="card">
-                <img src="../../assets/gunung.jpg" alt="Gunung Lokon">
-                <h3>Gunung Lokon</h3>
-                <p>Gunung Lokon adalah wisata vulkanik yang mempesona, terletak di Tomohon, Sulawesi Utara.</p>
-                <button class="book-now">Book now</button>
-            </div>
-        </div>
-        <button class="more-button">More</button>
-    </div>
-
-    <footer class="footer">
-        <div class="social-media">
-            <a href="#"><img src="../../assets/foot-ig.png" alt="Instagram"></a>
-            <a href="#"><img src="../../assets/foot-wa.png" alt="WhatsApp"></a>
-            <a href="#"><img src="../../assets/foot-git.png" alt="GitHub"></a>
-        </div>
-            <nav class="footer-nav">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Package</a>
-            <a href="#">Booking</a>
-        </nav>
-        <p>Created by <span class="bold-text">KAKIGATAL</span>. | @ 2024</p>
-    </footer>
     
 
 </body>
