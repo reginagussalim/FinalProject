@@ -38,7 +38,7 @@ body, html {
 }
 
 .section1 {
-    height: 40vh;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -49,7 +49,63 @@ body, html {
 }
 
 .section1 h1 {
-    font-size: 3em;
-    margin: 20px 0;
+    font-size: 3.2em;
+    margin: 35px 0;
     font-family: Helvetica;
+}
+
+.destination {
+    background-color: white;
+    color: #1d3a96;
+    padding: 10px 20px;
+    margin: 10px 0; /* Atur jarak sesuai kebutuhan */
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.section2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.section2 form {
+    background-color: rgba(255, 255, 255, 0.208);
+    padding: 60px;
+    border-radius: 24px;
+    width: 80%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    -ms-border-radius: 24px;
+    -o-border-radius: 24px;
+}
+
+.section2 form label {
+    align-self: flex-start;
+    margin: 14px 0 10px 0;
+    font-weight: bold;
+}
+
+.section2 form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.section2 form button {
+    background-color: #1d3a96;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1em;
 }
