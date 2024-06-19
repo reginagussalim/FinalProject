@@ -40,12 +40,15 @@
             </a>
         </div>
         <div class="login-card">
-            <h2>Login</h2>
+            <h2>Register</h2>
             <form action="#" method="POST">
                 <input type="email" name="email" placeholder="Email" required />
                 <input type="password" name="password" placeholder="Password" required />
                 <input type="submit" name="submit" />
             </form>
+            <a href='register.php'>
+                <span>Register</span>
+            </a>
         </div>
     </body>
 </html>

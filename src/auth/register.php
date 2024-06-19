@@ -43,6 +43,9 @@
                 <input type="password" name="password" placeholder="Password" required />
                 <input type="submit" name="submit" />
             </form>
+            <a href='login.php'>
+                <span>Login</span>
+            </a>
         </div>
     </body>
 </html>
