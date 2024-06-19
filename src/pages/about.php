@@ -4,18 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
-    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/about.css">
 </head>
 <body>
     <!-- section 1 -->
     <div class="section1">
         <div class="navbar">
-            <img src="../../assets/logo.png" alt="Logo XPLORE">
+            <a href="home.php">
+                <img src="../../assets/logo.png" alt="Logo XPLORE">
+            </a>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Package</a></li>
-                <li><a href="#">History</a></li>
+                <li><a href="home.php">Home</a></li>
+                <li><a href="about.php">About</a></li>
+                <li><a href="package.php">Package</a></li>
+                <li><a href="history.php">History</a></li>
+                <?php
+                // Check if user is logged in
+                session_start();
+                if (isset($_SESSION['username'])) {
+                    // If logged in, show Logout button
+                    echo '<li><a href="../auth/logout.php">Logout</a></li>';
+                } else {
+                    // If not logged in, show Login button
+                    echo '<li><a href="../auth/login.php">Login</a></li>';
+                }
+                ?>
             </ul>
         </div>
         <h1>About us</h1>

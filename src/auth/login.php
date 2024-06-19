@@ -12,7 +12,13 @@
         if ($result->num_rows > 0) {
             $row = mysqli_fetch_assoc($result);
             $_SESSION['username'] = $row['email'];
-            header('Location: ../pages/test.php');
+            $_SESSION['role'] = $row['role'];
+            $_SESSION['id'] = $row['id'];
+            if ($row['role'] == 'Admin') {
+                header('Location: ../admin/dashboard.php');
+            } else {
+                header('Location: ../pages/package.php');
+            }
         } else {
             echo "<script>alert('Email atau password Anda salah. Silakan coba lagi!')</script>";
         }
@@ -25,11 +31,13 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Login Card</title>
-        <link rel="stylesheet" href="../styles/test.css">
+        <link rel="stylesheet" href="../styles/new-login.css">
     </head>
     <body>
         <div class="navbar">
-            <img src="../../assets/logo.png" alt="Logo XPLORE" />
+            <a href="../pages/home.php">
+                <img src="../../assets/logo.png" alt="Logo XPLORE">
+            </a>
         </div>
         <div class="login-card">
             <h2>Login</h2>

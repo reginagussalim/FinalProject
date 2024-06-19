@@ -55,7 +55,8 @@ body {
   flex-direction: column;
 }
 .login-card input[type="email"],
-.login-card input[type="password"] {
+.login-card input[type="password"],
+.login-card input[type="text"] {
   padding: 10px;
   margin: 10px 0;
   border: 1px solid #ccc;
@@ -98,13 +99,4 @@ body {
   text-decoration: none;
   margin: 0 15px; /* Add spacing between footer nav items */
   font-size: 1.1em;
-}
-
-.footer p {
-  margin: 10px 0 0;
-  font-size: 0.9em;
-}
-
-.footer .bold-text {
-  font-weight: bold;
 }

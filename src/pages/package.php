@@ -1,3 +1,8 @@
+<?php
+require '../../config.php';
+include '../../controller/destinationController.php';
+$destination = read();
+?>
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -10,12 +15,25 @@
     <!-- section 1 -->
     <div class="section1">
         <div class="navbar">
-            <img src="../../assets/logo.png" alt="Logo XPLORE">
+            <a href="home.php">
+                <img src="../../assets/logo.png" alt="Logo XPLORE">
+            </a>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Package</a></li>
-                <li><a href="#">History</a></li>
+                <li><a href="home.php">Home</a></li>
+                <li><a href="about.php">About</a></li>
+                <li><a href="package.php">Package</a></li>
+                <li><a href="history.php">History</a></li>
+                <?php
+                // Check if user is logged in
+                session_start();
+                if (isset($_SESSION['username'])) {
+                    // If logged in, show Logout button
+                    echo '<li><a href="../auth/logout.php">Logout</a></li>';
+                } else {
+                    // If not logged in, show Login button
+                    echo '<li><a href="../auth/login.php">Login</a></li>';
+                }
+                ?>
             </ul>
         </div>
         <h1>Package</h1>
@@ -25,26 +43,18 @@
     <div class="section2">
         <h2>DESTINATIONS</h2>
         <div class="card-container">
+            <?php foreach ($destination as $dest) : ?>
             <div class="card">
-                <img src="../../assets/pantai.jpg" alt="Bunaken">
-                <h3>Bunaken</h3>
-                <p>Bunaken adalah destinasi wisata bahari yang terkenal di Indonesia, terletak di Provinsi Sulawesi Utara.</p>
-                <button class="book-now">Book now</button>
+                <img src=<?= '../../assets/destination/' . $dest['link_gambar'] ?> alt="img">
+                <h3><?= $dest['name']; ?></h3>
+                <p><?= $dest['desc']; ?></p>
+                <a href="booking.php?id=<?= $dest['id']; ?>">
+                    <button class="book-now">Book now</button>
+                </a>
+                
             </div>
-            <div class="card">
-                <img src="../../assets/air.jpg" alt="Air Terjun Kali">
-                <h3>Air Terjun Kali</h3>
-                <p>Air Terjun Kali adalah destinasi wisata alam yang memukau, terletak di tengah hutan yang asri dan alami.</p>
-                <button class="book-now">Book now</button>
-            </div>
-            <div class="card">
-                <img src="../../assets/gunung.jpg" alt="Gunung Lokon">
-                <h3>Gunung Lokon</h3>
-                <p>Gunung Lokon adalah wisata vulkanik yang mempesona, terletak di Tomohon, Sulawesi Utara.</p>
-                <button class="book-now">Book now</button>
-            </div>
+            <?php endforeach; ?>
         </div>
-        <button class="more-button">Load more</button>
     </div>
 
     <!-- Footer -->
