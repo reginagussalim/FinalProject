@@ -35,7 +35,7 @@
             <img src="../../assets/logo.png" alt="Logo XPLORE" />
         </div>
         <div class="login-card">
-            <h2>Login</h2>
+            <h2>Register</h2>
             <form action="#" method="POST">
               
                 <input type="text" name="name" placeholder="Name" required />

@@ -43,28 +43,36 @@ if (!isset($_SESSION['username'])) {
 
     <div class="header">
         <h1>History</h1>
+        <?php
+        if($transaction == null){
+            echo "<h1>anda belum memasukan pemesanan!</h1>";
+        }
+        ?>
     </div>
 
     <div class="historyCard">
         <div class="card-container">
-        <?php foreach ($transaction as $trs) : ?>
-            <?php 
-                $dest = readById($trs['idDestination']);
-            ?>
-            <div class="card">
-                <div class="cardContent">
-                    <img src="<?= '../../assets/destination/' . $dest[0]['link_gambar'] ?>" alt="Bunaken">
-                    <div class="place">
-                        <h3><?= $dest[0]['name']; ?></h3>
-                        <p><?= $dest[0]['desc']; ?></p>
-                        <p><?= $trs['guest'] . ' orang' ?></p>
-                    </div>
-                    <div class="statusProses">
-                        <p>Check your email!</p>
+        <?php    
+            foreach ($transaction as $trs) : ?>
+                <?php 
+                    $dest = readById($trs['idDestination']);
+                ?>
+                <div class="card">
+                    <div class="cardContent">
+                        <img src="<?= '../../assets/destination/' . $dest[0]['link_gambar'] ?>" alt="Bunaken">
+                        <div class="place">
+                            <h3><?= $dest[0]['name']; ?></h3>
+                            <p><?= $dest[0]['desc']; ?></p>
+                            <p><?= $trs['guest'] . ' orang' ?></p>
+                        </div>
+                        <div class="statusProses">
+                            <p>Check your email!</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <?php endforeach; ?>
+        <?php 
+            endforeach; 
+        ?>
 
         </div>
     </div>
