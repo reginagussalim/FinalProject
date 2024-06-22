@@ -149,7 +149,7 @@ function upload()
         return false;
     }
 
-    move_uploaded_file($tmpName, __DIR__ . '/assets/destination/' . $namaFile);
+    move_uploaded_file($tmpName, __DIR__ . '/../assets/destination/' . $namaFile);
 
     return $namaFile;
 }

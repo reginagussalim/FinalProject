@@ -39,7 +39,9 @@ $destination = readTop();
             <h1 class="headerOne">MANADO</h1>
             <h2 class="headerTwo">MAKE YOUR TOUR WORTHWHILE</h2>
         </div>
-        <button class="eksplore">Eksplore</button>
+        <a href="package.php">
+            <button class="eksplore">Eksplore</button>
+        </a>
     </div>
 
     <div class="box-container">
@@ -100,7 +102,9 @@ $destination = readTop();
                 <img src=<?= '../../assets/destination/' . $dest['link_gambar'] ?> alt="img">
                 <h3><?= $dest['name']; ?></h3>
                 <p><?= $dest['desc']; ?></p>
-                <button class="book-now">Book now</button>
+                <a href="booking.php?id=<?= $dest['id']; ?>">
+                    <button class="book-now">Book now</button>
+                </a>
             </div>
             <?php endforeach; ?>
         </div>
